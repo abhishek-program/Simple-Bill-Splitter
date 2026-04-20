@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Splitter</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="navbar">
+        <h1>💰 Bill Splitter</h1>
+        <button id="themeToggle">🌙 Dark Mode</button>
+    </header>
+
+    <main class="container">
+
+        <!-- ✅ Setup Section -->
+        <section class="setup-section">
+            <h2>Setup</h2>
+
+            <input type="number" id="totalAmount" placeholder="Total Amount (₹)" required>
+            <input type="number" id="totalPeople" placeholder="Number of People" required>
+
+            <button type="button" id="startSplit" class="btn-primary">Start</button>
+        </section>
+
+        <!-- 🔽 Input Section (hidden initially) -->
+        <section class="input-section">
+            <h2>Enter Bill Details</h2>
+
+            <form id="expenseForm">
+
+                <input type="text" id="personName" placeholder="Friend's Name" required>
+                <input type="number" id="amountPaid" placeholder="Amount Paid (₹)" required>
+
+                <!-- ✅ UPDATED: Manual Category Input (Optional) -->
+                <input type="text" id="category" placeholder="Category (optional)">
+
+                <button type="button" id="addPerson" class="btn-secondary">+ Add Person</button>
+                <button type="button" id="calculateSplit" class="btn-primary">Calculate Split</button>
+                <button type="button" id="clearAll" class="clear-btn">Clear All</button>
+
+            </form>
+        </section>
+
+        <!-- 👥 People List -->
+        <section class="people-section">
+            <h2>People</h2>
+            <ul id="peopleList"></ul>
+        </section>
+
+        <!-- 📊 Chart -->
+        <canvas id="contributionChart" width="400" height="200"></canvas>
+
+        <!-- 📋 Results -->
+        <section class="result-section">
+            <h2>Results</h2>
+            <ul id="resultList"></ul>
+        </section>
+
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
